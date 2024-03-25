@@ -11,6 +11,14 @@ const config = {
 	],
   prefix: "",
   theme: {
+    screens: {
+      'sm': "640px",
+      'md': "768px",
+      'lg': "1024px",
+      'xl': "1280px",
+      '2xl': "1600px",
+      '3xl': "2000px"
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -96,10 +104,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wiggle: 'wiggle 1s ease-in-out infinite',
       },
     },
   },

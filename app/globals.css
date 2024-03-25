@@ -75,6 +75,21 @@ body {
   background-color: #EFEFEF;
 }
 
+.chmura {
+  height: 17rem;
+  width: 80rem; 
+  position: absolute;
+  top: 5rem;
+  scale: 75%;
+  z-index: -1;
+}
+
+.text-gradient-back {
+  background-image: url('https://i.pngimg.me/thumb/f/720/m2i8G6b1A0G6Z5b1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .text-gradient {
   background: linear-gradient(to right, #480567 40%, #F3AF28 100%);
   -webkit-background-clip: text;

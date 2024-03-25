@@ -271,17 +271,17 @@ const CarouselMain = () => {
     >
       <CarouselContent>
         {pictures.map((src, index) => (
-          <CarouselItem key={index} className="basis-1/3 flex m-4 aspect-square items-center justify-center bg-main-600 rounded-xl">
+          <CarouselItem key={index} className="basis-1/3 flex m-4 items-center justify-center pl-0 bg-back-light-500 rounded-xl">
                   <Image
                     src={src}
                     alt={`image - ${index}`}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full rounded-xl "
                   />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="bg-secondary-400 text-main-600 "/>
+      <CarouselNext className="bg-secondary-400 text-main-600 "/>
     </Carousel>
   )
 }
