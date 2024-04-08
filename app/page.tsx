@@ -9,9 +9,8 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      {/* <Oferta /> */}
+      <Oferta />
       <ScrollBack />
-      <StickyScroll />
     </>
   )
 }

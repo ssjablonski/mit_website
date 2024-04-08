@@ -13,13 +13,20 @@ const StickyScrollTitle = ({ children, activeCard, setActiveCard }: Props) => {
 
     useEffect(() => {
         if (isInView) {
-            setActiveCard(children);
+            setActiveCard(children[0]);
         }
     }, [isInView, children, setActiveCard]);
 
 
     return (
-        <p ref={ref} className={`py-16 text-5xl font-semibold ${isInView ? "text-black": "text-back-light-500"}`}>{children}</p>
+        <div ref={ref} className='flex flex-col'>
+            <p className={`py-12 text-5xl font-semibold ${isInView ? "text-gradient-2": "text-back-light-500"}`}>
+                {children[0]}
+            </p>
+            <p className={`text-2xl font-medium ${isInView ? "text-black" : "text-back-light-500"}`}>{children[1]}</p>
+            
+        </div>
+        
     )
 }
 

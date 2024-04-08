@@ -91,7 +91,13 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #480567 40%, #F3AF28 100%);
+  background: linear-gradient(to right, #480567, #F3AF28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(to right, #480567, #F3AF28 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

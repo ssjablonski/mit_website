@@ -10,41 +10,42 @@ import socjo from "@/public/ZAJCIASOCJOTERAPIA.jpg"
 import StickyScrollTitle from "./StickyScrollTitle";
 import StickyScrollCard from "./StickyScrollCard";
 import { features } from "process";
+
+// {
+//     id: 1,
+//     title: "BR",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
+//     content: (
+//         <Image
+//           src={br}
+//           width={300}
+//           height={300}
+//           alt="linear board demo"
+//           className="w-full h-full object-cover rounded-2xl"
+//         />
+//     )
+//   }
  
 const content = [
   {
     id: 0,
-    title: "Czytanie",
+    title: "Nauka czytania",
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
+        "Zajęcia czytania mają na celu rozwijanie umiejętności czytania oraz zrozumienia tekstu u dzieci. Poprzez zabawę z literami i słowami, uczniowie uczą się koncentracji na tekście, rozpoznawania liter, a także rozbudowywania słownictwa. Zajęcia mogą obejmować głośne czytanie przez nauczyciela, czytanie indywidualne i grupowe, a także ćwiczenia na zrozumienie przeczytanego tekstu.",
     content: (
         <Image
           src={czytanie}
           width={300}
           height={300}
           alt="linear board demo"
-          className="w-full h-full object rounded-2xl-cover"
-        />
-    )
-  },
-  {
-    id: 1,
-    title: "BR",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
-    content: (
-        <Image
-          src={br}
-          width={300}
-          height={300}
-          alt="linear board demo"
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object rounded-2xl"
         />
     )
   },
   {
     id: 2,
-    title: "Rozwojowe",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
+    title: "Zajęcia rozwojowe",
+    description: "Zajęcia rozwojowe mają na celu wszechstronny rozwój dziecka. Obejmują one różnorodne aktywności stymulujące rozwój intelektualny, emocjonalny, społeczny i fizyczny. Dzieci mają możliwość rozwijania swoich pasji i zainteresowań, uczestnicząc w różnych grach i zabawach, które rozwijają kreatywność, umiejętność pracy w grupie oraz samodzielność.",
     content: (
         <Image
           src={ogolno}
@@ -57,8 +58,8 @@ const content = [
   },
   {
     id: 3,
-    title: "Socjo",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
+    title: "Socjoterapia",
+    description: "Socjoterapia wprowadza dzieci w świat społeczny, ucząc ich zrozumienia różnych aspektów funkcjonowania w społeczeństwie. Dzieci uczą się o różnorodności kulturowej, znaczeniu współpracy i tolerancji, a także podstawowych pojęć związanych z funkcjonowaniem grup społecznych. Zajęcia mogą zawierać elementy pracy grupowej, dyskusji oraz gier rozwijających umiejętności społeczne.",
     content: (
         <Image
           src={socjo}
@@ -73,7 +74,7 @@ const content = [
    {
     id: 4,
     title: "Rytmika",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
+    description: "Zajęcia rytmiczne mają na celu rozwijanie poczucia rytmu i koordynacji ruchowej u dzieci poprzez muzykę i taniec. Dzieci uczą się podstawowych kroków tanecznych, rytmów muzycznych oraz uczestniczą w zabawach ruchowych z elementami muzyki. Zajęcia sprzyjają także rozwijaniu zdolności słuchowych i ekspresji ciała.",
     content: (
         <Image
           src={rytmika}
@@ -99,6 +100,7 @@ export function StickyScroll() {
                             <li key={item.id}>
                                 <StickyScrollTitle activeCard={activeCard} setActiveCard={setActiveCard} >
                                     {item.title}
+                                    {item.description}
                                 </StickyScrollTitle>
                             </li>
                         ))}
