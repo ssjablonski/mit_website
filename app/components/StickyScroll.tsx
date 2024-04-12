@@ -3,28 +3,11 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import czytanie from "@/public/ZAJCIACZYTANIE.jpg";
-import br from "@/public/ZAJCIANABR.jpg";
 import ogolno from "@/public/ZAJCIAOGLNOROZWOJOWE.jpg";
 import rytmika from "@/public/ZAJCIARYTMIKA.jpg";
 import socjo from "@/public/ZAJCIASOCJOTERAPIA.jpg"
 import StickyScrollTitle from "./StickyScrollTitle";
 import StickyScrollCard from "./StickyScrollCard";
-import { features } from "process";
-
-// {
-//     id: 1,
-//     title: "BR",
-//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit porro, illo, totam similique et corporis in modi ducimus accusamus quaerat aperiam excepturi dicta unde architecto!",
-//     content: (
-//         <Image
-//           src={br}
-//           width={300}
-//           height={300}
-//           alt="linear board demo"
-//           className="w-full h-full object-cover rounded-2xl"
-//         />
-//     )
-//   }
  
 const content = [
   {
@@ -92,7 +75,7 @@ export function StickyScroll() {
     const [activeCard, setActiveCard] = useState(content[0].title);
 
     return (
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto max-w-6xl px-4 ">
             <div className="flex w-full gap-20 items-start">
                 <div className="w-full py-[50vh]">
                     <ul>

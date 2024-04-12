@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 type CardProps = {
     children: React.ReactNode[],
@@ -7,9 +8,14 @@ type CardProps = {
 
 const StickyScrollCard = ({ children, activeCard }: CardProps) => {
   return (
-    <div className={`absolute inset-0 h-full w-full rounded-3xl object-cover ${activeCard === children[1] ? "visible" : "invisible"}`}>
-      {children[0]}
-    </div>
+    <AnimatePresence>
+      {activeCard === children[1] ? 
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}className={`absolute inset-0 h-full w-full rounded-3xl object-cover ${activeCard === children[1] ? "visible" : "invisible"}`}>
+        {children[0]}
+      </motion.div>
+      : null}
+    </AnimatePresence>
+    
   )
 }
 
