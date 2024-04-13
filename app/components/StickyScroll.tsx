@@ -61,8 +61,8 @@ const content = [
     content: (
         <Image
           src={rytmika}
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           alt="linear board demo"
           className="w-full h-full object-cover rounded-2xl"
         />
@@ -75,8 +75,8 @@ export function StickyScroll() {
     const [activeCard, setActiveCard] = useState(content[0].title);
 
     return (
-        <div className="mx-auto max-w-6xl px-4 ">
-            <div className="flex w-full gap-20 items-start">
+        <div className="mx-auto max-w-6xl px-6 ">
+            <div className="flex w-full gap-10">
                 <div className="w-full py-[50vh]">
                     <ul>
                         {content.map((item) => (
@@ -89,8 +89,8 @@ export function StickyScroll() {
                         ))}
                     </ul>
                 </div>
-                <div className="w-full flex sticky top-0 h-screen items-center">
-                    <div className="relative w-3/4 aspect-square rounded-2xl bg-gray-600">
+                <div className="w-full flex sticky top-0 h-screen justify-center items-center">
+                    <div className="relative w-3/4 aspect-square rounded-2xl">
                         {content.map((item) => (
                             <StickyScrollCard key={item.id} activeCard={activeCard}>
                                 {[item.content, item.title]}
