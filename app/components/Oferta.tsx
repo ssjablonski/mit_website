@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { StickyScroll } from './StickyScroll'
+import { StickyScroll } from './StickyScrollComponent/StickyScroll'
 import { motion } from 'framer-motion'
 
 const Oferta = forwardRef<HTMLElement>((props, ref) => {

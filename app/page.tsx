@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Oferta from "./components/Oferta"
 import Questions from "./components/QuestionsComponent/Questions"
 import ScrollBack from "./components/ScrollBack"
-import { StickyScroll } from "./components/StickyScroll"
+import { StickyScroll } from "./components/StickyScrollComponent/StickyScroll"
 
 const Home = () => {
   return (

@@ -90,6 +90,10 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: theme => ({
+         'gradient-45deg': 'linear-gradient(45deg, var(--tw-gradient-stops))',
+         'gradient-60deg': 'linear-gradient(60deg, var(--tw-gradient-stops))',
+      }),
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
